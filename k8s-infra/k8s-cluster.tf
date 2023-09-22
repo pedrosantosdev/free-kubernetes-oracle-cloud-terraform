@@ -4,6 +4,7 @@ provider "kubernetes" {
 
 provider "oci" {
   region = var.region
+  private_key = var.private_key
 }
 
 resource "kubernetes_namespace" "free_namespace" {
