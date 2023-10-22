@@ -3,19 +3,10 @@ variable "compartment_id" {
   description = "The compartment to create the resources in"
 }
 
-variable "region" {
-  type        = string
-  description = "The region to provision the resources in"
-}
-
-variable "public_subnet_id" {
+variable "certificate_email" {
   type = string
-  description = "The public subnet's OCID"
-}
-
-variable "node_pool_id" {
-  type = string
-  description = "The OCID of the Node Pool where the compute instances reside"
+  description = "The email address that is going to receive email from lets encrypt"
+  default = "example@domain.com"
 }
 
 variable "private_key" {
